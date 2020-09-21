@@ -1,0 +1,120 @@
+{
+  "name": "armandokit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "my kit",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server",
+    "test": "",
+    "build": "webpack -p",
+    "pretest": "eslint --ignore-path .gitignore .",
+    "dev": "DEBUG=server,sver:* webpack-dev-server --config webpack.config.js --port 3000",
+    "server": "DEBUG=server,server:* babel-node src/server.js",
+    "start-dev": "run-p dev server"
+  },
+  "keywords": [
+    "blog",
+    "armando",
+    "ejs",
+    "fullstack"
+  ],
+  "author": "Armando Salinas",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongodb-client-encryption": "^1.1.0",
+    "mongoose": "^5.10.0",
+    "mysql": "^2.18.1",
+    "react": "^16.13.1",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "uuid": "^8.3.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "cors": "^2.8.5",
+    "css-loader": "^4.2.1",
+    "debug": "^4.1.1",
+    "eslint": "^7.6.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.5",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "json-server": "^0.16.1",
+    "mongodb": "^3.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.1"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "no-debugger": "off",
+      "no-console": "off",
+      "no-unused-vars": "warn",
+      "react/prop-types": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "root": true,
+  "proxy": "http://localhost:3001"
+}
