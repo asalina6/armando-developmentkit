@@ -1,0 +1,80 @@
+@import "_reset.scss";
+@import "_normalize.scss";
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+:root {
+  --background-color: #f7fff6;
+  --inner-background: #9cc69b; //#BDE4A8;
+  --font-color: #676f54;
+  --font-family: arial;
+  --content-width: 80%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.4;
+  background: var(--background-color);
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.jumplink {
+  overflow: hidden;
+  position: relative;
+  span {
+    position: absolute;
+    visibility: hidden;
+
+    //desktop
+    @media screen and (min-width: 1026px) {
+      top: -100px;
+    }
+    //laptops
+    @media screen and (max-width: 1025px) {
+      top: -100px;
+    }
+    //tablets
+    @media screen and (max-width: 768px) {
+      top: -10px;
+    }
+    //mobile device
+    @media screen and (max-width: 480px) {
+      top: -10px;
+    }
+  }
+}
+
+.center-container {
+  display: block;
+  margin: auto;
+
+  //desktop
+  @media screen and (min-width: 1026px) {
+    width: 85%;
+  }
+  //laptops
+  @media screen and (max-width: 1025px) {
+    width: 85%;
+  }
+  //tablets
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  //mobile device
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
